@@ -68,3 +68,81 @@ DELETE FROM [GOTProject] WHERE nameofcharacter = 'Robin'
 INSERT INTO [GOTProject] VALUES
 ('Robin', 'House Arryn', 'Vale', 1, 8, 'none', 'none', 8)
 
+INSERT INTO [GOTProject] VALUES
+('Robert', 'House Baratheon', 'Stormlands', 1, 1, 'none', 'Boar Injury', 31)
+
+INSERT INTO [GOTProject] VALUES
+('Jorah', 'House Mormont', 'North', 1, 8, 'night walkers', 'stabbed', 143)
+
+INSERT INTO [GOTProject] VALUES
+  ('Joffrey', 'House Baratheon', 'Kings Landing', 1, 4, 'Oleanna Tyrell', 'poisoned', 70),
+  ('Sandor (The Hound)', 'House Clegane', 'Kings Landing', 1, 8, 'Gregor (The Mountain)', 'Battle', 231),
+  ('Gregor (The Mountain)', 'House Clegane', 'Kings Landing', 1, 8, 'Sandor (The Hound)', 'Battle', 34),
+  ('Davos', 'House Seaworth', 'Kings Landing', 2, 8, 'none', 'none', 296),
+  ('Samwell', 'House Tarly', 'Reach', 1, 8, 'none', 'none', 264),
+  ('Stannis', 'House Baratheon', 'Stormlands', 2, 5, 'Brienne of Tarth', 'beheaded', 73),
+  ('Melisandre', 'None', 'Essos', 2, 8, 'old age', 'none', 73)
+  
+  INSERT INTO [GOTProject] VALUES
+  ('Jeor', 'House Mormont', 'North', 1, 3, 'Rast', 'Stabbed', 24),
+  ('Bronn', 'None', 'Kings Landing', 1, 0, 'none', 'none', 83),
+  ('Varys', 'House Targaryen', 'Kings Landing', 1, 0, 'Daenerys Targaryen', 'Burned', 267)
+  
+  INSERT INTO [GOTProject] VALUES
+  ('Shae', 'None', 'Essos', 1, 4, 'Tyrion Lannister', 'Strangled', 50),
+  ('Margaery', 'House Tyrell', 'Reach', 1, 6, 'Cersei Lannister', 'Wildfire Explosion', 78),
+  ('Talisa', 'House Stark', 'North', 2, 3, 'Lothar Frey', 'Stabbed', 31),
+  ('Ygritte', 'Wildling', 'Beoynd the Wall', 2, 4, 'Olly', 'Arrow', 51),
+  ('Gendry', 'House Baratheon', 'Stomrlands', 1, 0, 'none', 'none', 51)
+  
+  UPDATE [GOTProject]
+  SET Seasonwhendied = 0
+  WHERE Nameofcharacter = 'Davos'
+  
+  UPDATE [GOTProject]
+  SET Seasonwhendied = 0
+  WHERE Nameofcharacter = 'Robin'
+  
+  UPDATE [GOTProject]
+  SET Seasonwhendied = 0
+  WHERE Nameofcharacter = 'Tyrion'
+  
+  UPDATE [GOTProject]
+  SET Seasonwhendied = 0
+  WHERE Nameofcharacter = 'Edmure'
+  
+  UPDATE [GOTProject]
+  SET Seasonwhendied = 0
+  WHERE Nameofcharacter = 'Samwell'
+  
+  UPDATE [GOTProject]
+  SET Seasonwhendied = 8
+  WHERE Nameofcharacter = 'Varys'
+  
+  UPDATE [GOTProject]
+  SET Screentime = 144
+  WHERE Nameofcharacter = 'Catelyn'
+  
+  UPDATE [GOTProject]
+  SET Seasonwhendied = 0
+  WHERE Nameofcharacter = 'Yara'
+  
+  INSERT INTO [GOTProject] VALUES
+  ('Tormund', 'Wildling', 'Beyond the Wall', 3, 0, 'none', 'none', 192),
+  ('Brienne', 'House Tarth', 'Stomrlands', 2, 0, 'none', 'none', 228),
+  ('Ramsey', 'House Bolton', 'North', 3, 6, 'Sansa Stark', 'Eaten by Dogs', 66),
+  ('Gilly', 'Wildling', 'Beyond the Wall', 2, 0, 'none', 'none', 68),
+  ('Daario', 'House Targaryen', 'Essos', 3, 0, 'none', 'none', 46),
+  ('Missandei', 'House Targaryen', 'Essos', 3, 0, 'Cersei Lannister', 'Beheaded', 228),
+  ('Ellaria', 'House Martell', 'Dorne', 4, 7, 'Cersei Lannister', 'Unknown', 24),
+  ('Tommen', 'House Baratheon', 'Kings Landing', 1, 6, 'Tommen Baratheon', 'Suicide', 43),
+  ('Myrcella', 'House Baratheon', 'Kings Landing', 1, 6, 'Ellaria Sand', 'Poisoned', 12),
+  ('Jaqen Hgahr', 'none', 'Essos', 1, 0, 'none', 'none', 27),
+  ('Roose', 'House Bolton', 'North', 2, 6, 'Ramsay Bolton', 'Stabbed', 30),
+  ('High Sparrow', 'None', 'Kings Landing', 5, 6, 'Cersei Lannister', 'Wildfire Explosion', 38),
+  ('Grey Worm', 'House Targaryen', 'Essos', 3, 0, 'none', 'none', 179)
+
+INSERT INTO [GOTProject] VALUES
+  ('Renly', 'House Baratheon', 'Stormlands', 1, 2, 'Stannis', 'Stabbed', 24),
+  ('Myranda', 'House Bolton', 'North', 3, 6, 'Theon Greyjoy', 'Fall', 13),
+  ('Walder', 'House Frey', 'Riverrun', 1, 7, 'Arya Stark', 'Throat Slit', 20)
