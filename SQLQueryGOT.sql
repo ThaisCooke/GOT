@@ -183,3 +183,7 @@ INSERT INTO [GOTProject] VALUES
 ('Three Eyed Raven', 'None', 'Beyond the wall', 1, 6, 'Night King', 'Slain', 8),
 ('Mance Ryder', 'Wildling', 'Beyond the Wall', 3, 5, 'Jon Snow', 'Arrow Shot', 21),
 ('Craster', 'Wildling', 'Beyond the Wall', 2, 3, 'Karl Tanner', 'Stabbed', 7)
+
+INSERT INTO [GOTProject] VALUES
+('Lancel', 'House Lannister', 'Westerlands', 1, 6, 'Cersei Lannister', 'Wildfire Explosion', 19),
+('Lyanna', 'House Mormont', 'North', 6, 8, 'Night walker', 'Crushed', 10)
