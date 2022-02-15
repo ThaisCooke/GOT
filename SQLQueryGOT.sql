@@ -146,3 +146,40 @@ INSERT INTO [GOTProject] VALUES
   ('Renly', 'House Baratheon', 'Stormlands', 1, 2, 'Stannis', 'Stabbed', 24),
   ('Myranda', 'House Bolton', 'North', 3, 6, 'Theon Greyjoy', 'Fall', 13),
   ('Walder', 'House Frey', 'Riverrun', 1, 7, 'Arya Stark', 'Throat Slit', 20)
+  
+  INSERT INTO [GOTProject] VALUES
+('Tyene', 'House Martell', 'Dorne', 5, 7, 'Cersei Lannister', 'Poisoned', 12),
+('Nymeria', 'House Martell', 'Dorne', 5, 7, 'Euron Greyjoy', 'Choked', 8),
+('Obara', 'House Martell', 'Dorne', 5, 7, 'Euron Greyjoy', 'Stabbed', 8),
+('Trystane', 'House Martell', 'Dorne', 5, 6, 'Ellaria Sand', 'Stabbed', 8),
+('Doran', 'House Martell', 'Dorne', 5, 6, 'Ellaria Sand', 'Stabbed', 8),
+('Oberyn', 'House Martell', 'Dorne', 4, 4, 'Gregor (The Mountain)', 'Skull Crushed', 29)
+
+INSERT INTO [GOTProject] VALUES
+('Lyanna', 'House Stark', 'North', 6, 7, 'None', 'Childbirth', 5),
+('Hodor', 'House Stark', 'North', 1, 6, 'Night walkers', 'Teared', 30),
+('Oleanna', 'House Tyrell', 'Reach', 3, 7, 'Jamie Lannister', 'Poisoned', 44),
+('Mace', 'House Tyrell', 'Reach', 4, 6, 'Cersei Lannister', 'Wildfire Explosion', 12),
+('Loras', 'House Tyrell', 'Reach', 1, 6, 'Cersei Lannister', 'Wildfire Explosion', 32),
+('Randyll', 'House Tarly', 'Reach', 6, 7, 'Daenerys Targaryen', 'Burned', 12),
+('Dickon', 'House Tarly', 'Reach', 6, 7, 'Daenerys Targaryen', 'Burned', 12)
+
+INSERT INTO [GOTProject] VALUES
+('Khal Drogo', 'Dothraki', 'Essos', 1, 2, 'Daenerys Targaryen', 'Smothered by pillow', 25),
+('Xaro Xhoan Daxos', 'None', 'Essos', 2, 2, 'Daenerys Targaryen', 'Unknown', 11),
+('Mirri Maz Duur', 'None', 'Essos', 1, 1, 'Daenerys Targaryen', 'Burned', 8),
+('Podrick', 'House Payne', 'Westerland', 2, 0, 'None', 'None', 45),
+('Ros', 'None', 'Kings Landing', 1, 3, 'Joffrey Lannister', 'Arrow Shot', 22),
+('Qyburn', 'House Lannister', 'Kings Landing', 3, 8, 'Gregor (The Mountain)', 'Skull Crushed', 25),
+('Pycelle', 'House Baratheon', 'Kings Landing', 1, 6, 'Qyburn', 'stabbed', 35),
+('Benjen', 'House Stark', 'North', 1, 7, 'Night Walkers', 'Overwhelmed', 13),
+('Alliser', 'House Thorne', 'North', 1, 6, 'Hanged', 'Jon Snow', 26),
+('Olly', 'Nights Watch', 'North', 4, 6, 'Hanged', 'Jon Snow', 12),
+('Aemon', 'House Targaryen', 'Stormlands', 1, 5, 'Old age', 'None', 19),
+('Rast', 'Nights Watch', 'North', 1, 4, 'Savaged', 'Ghost', 12)
+
+INSERT INTO [GOTProject] VALUES
+('Night King', 'None', 'Beyond the wall', 4, 8, 'Arya Stark', 'Stabbed', 12),
+('Three Eyed Raven', 'None', 'Beyond the wall', 1, 6, 'Night King', 'Slain', 8),
+('Mance Ryder', 'Wildling', 'Beyond the Wall', 3, 5, 'Jon Snow', 'Arrow Shot', 21),
+('Craster', 'Wildling', 'Beyond the Wall', 2, 3, 'Karl Tanner', 'Stabbed', 7)
