@@ -296,6 +296,26 @@ INSERT INTO CitiesGOT VALUES
 ('Missandei', 'Naath', 'Female'),
 ('Ellaria', 'Sunspear', 'Female')
 
+-- FIXING TYPOS:
+SELECT Nameofcharacter
+  FROM GOTProject
+  WHERE Region = 'Stomrlands'
+
+  UPDATE GOTProject
+  SET Region = 'Stormlands'
+  WHERE Nameofcharacter = 'Brienne'
+  
+  SELECT Nameofcharacter
+  FROM GOTProject
+  WHERE Region = 'Westerland'
+
+  UPDATE GOTProject
+  SET Region = 'Stormlands'
+  WHERE Nameofcharacter = 'Podrick'
+  
+  
+  --NOW LET'S HAVE SOME FUN
+
 
 -- INNER JOIN BOTH TABLES WITH NAME, ALLEGIANCE, REGION, CITY AND GENDER
 SELECT GOTProject.Nameofcharacter, GOTProject.Allegiance, GOTProject.Region, CitiesGOT.City, CitiesGOT.Gender
@@ -308,12 +328,13 @@ GOTProject.killer, GOTProject.method, GOTProject.screentime, CitiesGOT.City, Cit
 FROM GOTProject
 INNER JOIN CitiesGOT ON GOTProject.Nameofcharacter = CitiesGOT.Nameofcharacter
 
--- COUNT HOW MANY CHARACTERS BY GENDER
+-- COUNT HOW MANY CHARACTERS BY GENDER USING COUNT FUNCTION
 SELECT gender, COUNT (Gender)
 FROM CitiesGOT
 GROUP BY Gender 
 
--- WHO IS ALIVE OR DECEASED BY THE END OF THE SHOW
+
+-- WHO IS ALIVE OR DECEASED BY THE END OF THE SHOW USING CASE FUNCTION
 SELECT Nameofcharacter,
 CASE
 WHEN Seasonwhendied = 0 THEN 'alive'
@@ -321,7 +342,7 @@ ELSE 'Deceased'
 END AS 'Status'
 FROM GOTProject;
 
---MOST POPULAR WAY CHARACTERS DIED
+--MOST POPULAR WAY CHARACTERS DIED USING GROUP BY AND ORDER BY
 -- Disclosure: I didn't have enough Data for minor characters, such as the Frey Family. So, they were not counted and not part of this list.
 If those were counted, probably the number of poisoned/stabbed would be much higher
 SELECT method, COUNT(method)
@@ -329,23 +350,38 @@ FROM GOTProject
 GROUP BY method 
 ORDER BY 2 DESC
 
--- MOST SCREENTIME
+-- MOST SCREENTIME USING ORDER BY
 --Disclosure: Those were approximate numbers, since the data was hard to find, and a lot of times it didn't include the last season. 
-I can say that at least the top 15 are accurate.
+--I can say that at least the top 15 are accurate.
 SELECT Nameofcharacter, screentime
 FROM GOTProject
 ORDER BY 2 DESC
 
--- WHICH CITY ARE THE CHARACTERS FROM
+-- WHICH CITY ARE THE CHARACTERS FROM USING COUNT, GROUP BY AND ORDER BY
 SELECT City, COUNT(City)
 FROM CitiesGOT
 GROUP BY city
 ORDER BY 2 DESC
 
---WHO KILLED MOST PEOPLE
+--WHO KILLED MOST PEOPLE USING GROUP BY AND ORDER BY
 -- Disclosure: Again, I didn't have enough Data for minor characters. So, they were not counted and not part of this list.
-If those were counted, probably the killer would have killed many more people
+--If those were counted, probably the killer would have killed many more people (for instance, when the Septor exploded or when Kings Landing was burned down)
 SELECT killer, COUNT(killer)
 FROM GOTProject
 GROUP BY killer 
 ORDER BY 2 DESC
+
+--HOW MANY CHARACTERS WERE STILL ALIVE AT THE END OF SERIES COUNT AND CASE STATEMENTS
+SELECT COUNT (CASE
+WHEN Seasonwhendied = 0 THEN 'alive'
+END) AS Alive
+FROM GOTProject;
+
+--HOW MANY CHARACTERS ARE FROM THE NORTH REGION USING COUNT, GROUP BY AND HAVING
+SELECT Region, COUNT(Region)
+FROM GOTProject
+GROUP BY Region 
+HAVING Region = 'North'
+
+
+
