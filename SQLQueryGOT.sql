@@ -1,3 +1,5 @@
+-- CREATING TABLE FROM SCRATCH
+
 CREATE TABLE GOTProject
 (Nameofcharacter varchar (50),
 Allegiance varchar (50),
@@ -187,3 +189,122 @@ INSERT INTO [GOTProject] VALUES
 INSERT INTO [GOTProject] VALUES
 ('Lancel', 'House Lannister', 'Westerlands', 1, 6, 'Cersei Lannister', 'Wildfire Explosion', 19),
 ('Lyanna', 'House Mormont', 'North', 6, 8, 'Night walker', 'Crushed', 10)
+
+-- CREATING NEW TABLE THAT INCLUDES THE CITIES AND GENDER OF CHARACTERS
+
+CREATE TABLE CitiesGOT (
+Nameofcharacter varchar (50),
+City varchar (50),
+Gender varchar (50))
+
+INSERT INTO CitiesGOT VALUES 
+('Sansa', 'Winterfell', 'Female'),
+('Arya', 'Winterfell', 'Female'),
+('Bran', 'Winterfell', 'Male'),
+('Robb', 'Winterfell', 'Male'),
+('Ned', 'Winterfell', 'Male'),
+('Rickon', 'Winterfell', 'Male')
+
+INSERT INTO CitiesGOT VALUES 
+('Daenerys', 'Dragonstone', 'Female'),
+('Jon Snow', 'Winterfell', 'Male'),
+('Viserys', 'Dragonstone', 'Male'),
+('Cersei', 'Casterly Rock', 'Female'),
+('Robin', 'Eerie', 'Male'),
+('Robert', 'Dragonstone', 'Male'),
+('Catelyn', 'Winterfell', 'Female'),
+('Tyrion', 'Casterly Rock', 'Male'),
+('Jorah', 'Bear Island', 'Male'),
+('Jamie', 'Casterly Rock', 'Male'),
+('Tywin', 'Casterly Rock', 'Male'),
+('Joffrey', 'Kings Landing', 'Male')
+
+INSERT INTO CitiesGOT VALUES
+('Edmure', 'Riverrun', 'Male'),
+('Lisa', 'Eerie', 'Female'),
+('Sandor (The Hound)', 'Kings Landing', 'Male'),
+('Theon', 'Pyke', 'Male'),
+('Yara', 'Pyke', 'Female'),
+('Euron', 'Pyke', 'Male'),
+('Balon', 'Pyke', 'Male'),
+('Gregor (The Mountain)', 'Kings Landing', 'Male'),
+('Davos', 'Kings Landing', 'Male'),
+('Samwell', 'Horn Hill', 'Male'),
+('Stannis', 'Dragonstone', 'Male'),
+('Melisandre', 'Asshai', 'Female'),
+('Jeor', 'Bear Island', 'Male'),
+('Bronn', 'Kings Landing', 'Male'),
+('Varys', 'Kings Landing', 'Male'),
+('Shae', 'Lorath', 'Female'),
+('Margaery', 'Highgarden', 'Female'),
+('Talisa', 'Volantis', 'Female'),
+('Ygritte', 'None', 'Female'),
+('Gendry', 'Kings Landing', 'Male'),
+('Tormund', 'None', 'Male')
+
+INSERT INTO CitiesGOT VALUES
+('Brienne', 'Tarth', 'Female'),
+('Tommen', 'Kings Landing', 'Male'),
+('Myrcella', 'Kings Landing', 'Female'),
+('Jaqen Haghar', 'Lorath', 'Male'),
+('Roose', 'Dreadfort', 'Male'),
+('High Sparrow', 'Kings Landing', 'Male'),
+('Grey Worm', 'Astapor', 'Male'),
+('Renly', 'Dragonstone', 'Male'),
+('Myranda', 'Dreadfort', 'Female'),
+('Walder', 'The Twins', 'Male'),
+('Tyene', 'Sunspear', 'Female'),
+('Nymeria', 'Sunspear', 'Female'),
+('Obara', 'Sunspear', 'Female'),
+('Trystane', 'Sunspear', 'Male'),
+('Doran', 'Sunspear', 'Male'),
+('Oberyn', 'Sunspear', 'Male'),
+('Lyanna', 'Winterfell', 'Female'),
+('Hodor', 'Winterfell', 'Male'),
+('Oleanna', 'Highgarden', 'Female')
+
+INSERT INTO CitiesGOT VALUES
+('Mace', 'Highgarden', 'Male'),
+('Loras', 'Highgarden', 'Male'),
+('Randyll', 'Horn Hill', 'Male'),
+('Dickon', 'Horn Hill', 'Male'),
+('Khal Drogo', 'Vaes Dotrak', 'Male'),
+('Xaro Xhoan Daxos', 'Qarth', 'Male'),
+('Mirri Maz Duur', 'Lhazareen Village', 'Female'),
+('Podrick', 'Casterly Rock', 'Male')
+
+INSERT INTO CitiesGOT VALUES
+('Ros', 'Kings Landing', 'Female'),
+('Qyburn', 'Kings Landing', 'Male'),
+('Pycelle', 'Kings Landing', 'Male'),
+('Benjen', 'Winterfell', 'Male'),
+('Alliser', 'Kings Landing', 'Male'),
+('Olly', 'None', 'Male'),
+('Aemon', 'Dragonstone', 'Male'),
+('Rast', 'None', 'Male'),
+('Night King', 'None', 'Male'),
+('Three Eyed Raven', 'Kings Landing', 'Male'),
+('Mance Ryder', 'None', 'Male'),
+('Craster', 'Crasters Keep', 'Male')
+
+INSERT INTO CitiesGOT VALUES
+('Lancel', 'Kings Landing', 'Male'),
+('Lyanna', 'Bear Island', 'Female'),
+('Ramsey', 'Dreadfort', 'Male'),
+('Gilly', 'Crasters Keep', 'Female'),
+('Daario', 'Tyrosh', 'Male'),
+('Missandei', 'Naath', 'Female'),
+('Ellaria', 'Sunspear', 'Female')
+
+
+-- INNER JOIN BOTH TABLES WITH NAME, ALLEGIANCE, REGION, CITY AND GENDER
+SELECT GOTProject.Nameofcharacter, GOTProject.Allegiance, GOTProject.Region, CitiesGOT.City, CitiesGOT.Gender
+FROM GOTProject
+INNER JOIN CitiesGOT ON GOTProject.Nameofcharacter = CitiesGOT.Nameofcharacter
+
+-- INNER JOIN BOTH TABLES COMPLETELY
+SELECT GOTProject.Nameofcharacter, GOTProject.Allegiance, GOTProject.Region, GOTProject.Sesonfirstappearance, GOTProject.Seasonwhendied,
+GOTProject.killer, GOTProject.method, GOTProject.screentime, CitiesGOT.City, CitiesGOT.Gender
+FROM GOTProject
+INNER JOIN CitiesGOT ON GOTProject.Nameofcharacter = CitiesGOT.Nameofcharacter
+
