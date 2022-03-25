@@ -358,7 +358,7 @@ FROM GOTProject
 GROUP BY method 
 ORDER BY 2 DESC
 
--- MOST SCREENTIME USING ORDER BY
+-- MOST SCREENTIME IN MINUTES USING ORDER BY
 --Disclosure: Those were approximate numbers, since the data was hard to find, and a lot of times it didn't include the last season. 
 --I can say that at least the top 15 are accurate.
 SELECT Nameofcharacter, screentime
