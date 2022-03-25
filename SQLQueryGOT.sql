@@ -313,6 +313,14 @@ SELECT Nameofcharacter
   SET Region = 'Stormlands'
   WHERE Nameofcharacter = 'Podrick'
   
+  SELECT Nameofcharacter
+FROM GOTProject
+WHERE Method = 'throat slit'
+
+UPDATE GOTProject
+SET method = 'throat slith'
+WHERE Nameofcharacter = 'Walder'
+
   
   --NOW LET'S HAVE SOME FUN
 
