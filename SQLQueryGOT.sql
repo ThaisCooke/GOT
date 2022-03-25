@@ -61,9 +61,9 @@ INSERT INTO [GOTProject] VALUES
 DELETE FROM [GOTProject] WHERE nameofcharacter = 'Sansa'
 
 INSERT INTO [GOTProject] VALUES
-('Sansa', 'House Stark', 'North', 1, 0, 'none', 'none', 418)
+('Sansa', 'House Stark', 'North', 1, 0, 'none', 'none', 418),
 
-'Jon Snow', 'House Stark', 'North', 1, 0, 'none', 'none', 651)
+('Jon Snow', 'House Stark', 'North', 1, 0, 'none', 'none', 651)
 
 DELETE FROM [GOTProject] WHERE nameofcharacter = 'Robin'
 
@@ -97,6 +97,7 @@ INSERT INTO [GOTProject] VALUES
   ('Ygritte', 'Wildling', 'Beoynd the Wall', 2, 4, 'Olly', 'Arrow', 51),
   ('Gendry', 'House Baratheon', 'Stomrlands', 1, 0, 'none', 'none', 51)
   
+  -- FIXING DATA
   UPDATE [GOTProject]
   SET Seasonwhendied = 0
   WHERE Nameofcharacter = 'Davos'
