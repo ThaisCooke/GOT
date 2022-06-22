@@ -9,7 +9,7 @@ Why not "Game of Thrones"?
 There are so many characters, belonging to different regions, with different stories. I created this table from scratch, to practice some basic SQL skills. Feel free 
 to copy and paste and practice yourself. I hope you enjoy it!
 
-I also put the results in Tableau:
+I also put the results in Tableau. Check it out:
 https://public.tableau.com/app/profile/thais.cooke/viz/GOTViz_16481707703310/Dashboard1
 
 
